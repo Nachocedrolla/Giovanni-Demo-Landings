@@ -16,6 +16,9 @@
   <meta property="og:locale" content="es_AR">
   <meta property="og:site_name" content="Giovanni Servicios IA">
 
+  <!-- Forzar modo claro en todos los browsers/OS -->
+  <meta name="color-scheme" content="light only">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="Imagenes/Logo Giovanni Servicios IA.png">
 
@@ -58,6 +61,10 @@
   <!-- Page-specific styles -->
   <style>
     /* ---------- Hero gradient animation ---------- */
+    /* Forzar light mode siempre */
+    :root { color-scheme: light only; }
+    body { background-color: #ffffff !important; color: #1e293b !important; }
+
     /* ---------- Global font override ---------- */
     h1, h2, h3, h4, h5, h6,
     .hero__title, .hero__stat-number,
@@ -243,7 +250,7 @@
 
     /* ---------- Services section bg ---------- */
     #servicios {
-      background: linear-gradient(180deg, #f0f4ff 0%, #ffffff 60%);
+      background: #ffffff;
     }
 
     /* ---------- Services grid ---------- */
@@ -255,14 +262,14 @@
 
     .service-card {
       background: #ffffff;
-      border: 1.5px solid rgba(26, 58, 107, 0.1);
+      border: 2px solid #d0dcf5;
       border-radius: 20px;
       padding: 2.5rem 1.5rem;
       text-align: center;
       transition: all 0.35s ease;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 2px 16px rgba(26, 58, 107, 0.06);
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.10);
     }
 
     .service-card::after {
@@ -297,10 +304,11 @@
       height: 68px;
       margin-left: auto;
       margin-right: auto;
-      background: linear-gradient(135deg, #eef2ff 0%, #e0e8ff 100%);
+      background: linear-gradient(135deg, #2563eb 0%, #1a3a9f 100%);
       border-radius: 18px;
-      color: #2563eb;
+      color: #ffffff;
       transition: all 0.35s ease;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
     }
 
     .service-card__icon svg {
@@ -310,9 +318,9 @@
     }
 
     .service-card:hover .service-card__icon {
-      background: linear-gradient(135deg, #2563eb 0%, #1a3a9f 100%);
+      background: linear-gradient(135deg, #d4a853 0%, #b8860b 100%);
       color: #ffffff;
-      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+      box-shadow: 0 8px 24px rgba(212, 168, 83, 0.45);
     }
 
     .service-card h3 {
@@ -429,7 +437,7 @@
     }
 
     #como-funciona {
-      background: linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%);
+      background: #f8faff;
     }
 
     .timeline::before {
