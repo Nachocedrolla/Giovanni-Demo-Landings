@@ -16,8 +16,8 @@
   <meta property="og:locale" content="es_AR">
   <meta property="og:site_name" content="Giovanni Servicios IA">
 
-  <!-- Forzar modo claro en todos los browsers/OS -->
-  <meta name="color-scheme" content="light only">
+  <!-- Dark theme global -->
+  <meta name="color-scheme" content="dark">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="Imagenes/Logo Giovanni Servicios IA.png">
@@ -61,20 +61,20 @@
   <!-- Page-specific styles -->
   <style>
     /* ---------- Hero gradient animation ---------- */
-    /* ===== FORZAR LIGHT MODE - sin excepciones ===== */
-    :root { color-scheme: light only; }
+    /* ===== DARK THEME PREMIUM ===== */
+    :root { color-scheme: dark; }
     html, body {
-      background-color: #ffffff !important;
-      color: #1e293b !important;
+      background-color: #0a0f1e !important;
+      color: #f0f4ff !important;
     }
     .section, section {
-      background-color: #ffffff;
+      background-color: #0a0f1e;
     }
     .section-header h2 {
-      color: #0f172a !important;
+      color: #f0f4ff !important;
     }
     .section-header p {
-      color: #475569 !important;
+      color: #8da3c0 !important;
     }
 
     /* ---------- Global font override ---------- */
@@ -262,7 +262,7 @@
 
     /* ---------- Services section bg ---------- */
     #servicios {
-      background: #ffffff;
+      background: #0a0f1e;
     }
 
     /* ---------- Services grid ---------- */
@@ -273,15 +273,15 @@
     }
 
     .service-card {
-      background: #ffffff;
-      border: 2px solid #d0dcf5;
+      background: #131d35;
+      border: 1.5px solid rgba(255,255,255,0.08);
       border-radius: 20px;
       padding: 2.5rem 1.5rem;
       text-align: center;
       transition: all 0.35s ease;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.10);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
     }
 
     .service-card::after {
@@ -299,8 +299,8 @@
 
     .service-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 24px 48px rgba(26, 58, 107, 0.16);
-      border-color: rgba(37, 99, 235, 0.3);
+      box-shadow: 0 8px 40px rgba(59,130,246,0.2);
+      border-color: rgba(99,153,255,0.4);
     }
 
     .service-card:hover::after {
@@ -340,12 +340,12 @@
       font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 0.6rem;
-      color: #0f172a;
+      color: #f0f4ff;
     }
 
     .service-card p {
       font-size: 0.93rem;
-      color: #64748b;
+      color: #8da3c0;
       line-height: 1.65;
     }
 
@@ -449,7 +449,7 @@
     }
 
     #como-funciona {
-      background: #f8faff;
+      background: #0a0f1e;
     }
 
     .timeline::before {
@@ -485,7 +485,7 @@
       font-size: 0.85rem;
       font-weight: 700;
       color: #ffffff;
-      box-shadow: 0 0 0 4px #e0e8ff, 0 4px 12px rgba(37,99,235,0.3);
+      box-shadow: 0 0 0 4px rgba(99,153,255,0.15), 0 4px 12px rgba(37,99,235,0.3);
       z-index: 2;
     }
 
@@ -495,11 +495,11 @@
       justify-content: center;
       width: 52px;
       height: 52px;
-      background: linear-gradient(135deg, #eef2ff 0%, #dde8ff 100%);
+      background: #1e3a6e;
       border-radius: 14px;
       margin-bottom: 0.75rem;
-      color: #2563eb;
-      border: 1.5px solid rgba(37, 99, 235, 0.15);
+      color: #6399ff;
+      border: 1.5px solid rgba(99,153,255,0.2);
     }
 
     .timeline__icon svg {
@@ -512,13 +512,13 @@
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.15rem;
       font-weight: 700;
-      color: #0f172a;
+      color: #f0f4ff;
       margin-bottom: 0.35rem;
     }
 
     .timeline__step p {
       font-size: 0.95rem;
-      color: #64748b;
+      color: #8da3c0;
       line-height: 1.65;
     }
 
@@ -535,19 +535,19 @@
       align-items: center;
       gap: 0.4rem;
       padding: 0.6rem 1.4rem;
-      background: var(--gray-50);
-      border: 1px solid var(--gray-200);
+      background: #131d35;
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: 50px;
       font-size: 0.9rem;
       font-weight: 600;
-      color: var(--gray-600);
+      color: #8da3c0;
       transition: all var(--transition-fast);
     }
 
     .tech-badge:hover {
-      border-color: var(--accent);
-      color: var(--primary);
-      background: rgba(201, 168, 76, 0.06);
+      border-color: #3b82f6;
+      color: #f0f4ff;
+      background: rgba(59,130,246,0.08);
     }
 
     /* ---------- Contact grid ---------- */
@@ -598,6 +598,41 @@
 
     .contact-info__text a:hover {
       color: var(--accent);
+    }
+
+    /* ---------- Contact form dark ---------- */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: #131d35 !important;
+      border-color: rgba(255,255,255,0.1) !important;
+      color: #f0f4ff !important;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #8da3c0 !important;
+    }
+    .form-group label {
+      color: #8da3c0 !important;
+    }
+
+    /* ---------- Footer dark ---------- */
+    .footer {
+      background: #060b14 !important;
+    }
+
+    /* ---------- Navbar scrolled dark consistente ---------- */
+    .navbar.navbar-scrolled {
+      background: rgba(10,15,30,0.95) !important;
+    }
+    .navbar.navbar-scrolled .navbar__links a {
+      color: #8da3c0 !important;
+    }
+    .navbar.navbar-scrolled .navbar__links a:hover {
+      color: #f0f4ff !important;
+    }
+    .navbar.navbar-scrolled .navbar__brand span {
+      color: #f0f4ff !important;
     }
 
     /* ---------- Responsive overrides ---------- */
@@ -734,7 +769,7 @@
   </section>
 
   <!-- ========== SERVICIOS ========== -->
-  <section class="section" id="servicios" style="background:#dbeafe;">
+  <section class="section" id="servicios" style="background:#0a0f1e;">
     <div class="container">
       <header class="section-header">
         <h2>Que hacemos?</h2>
@@ -794,7 +829,7 @@
   </section>
 
   <!-- ========== DEMOS ========== -->
-  <section class="section" id="demos" style="background:#e0f2fe;">
+  <section class="section" id="demos" style="background:#0f1729;">
     <div class="container">
       <header class="section-header">
         <h2>Mira lo que podemos hacer por tu negocio</h2>
@@ -866,7 +901,7 @@
   </section>
 
   <!-- ========== COMO FUNCIONA ========== -->
-  <section class="section" id="como-funciona" style="background:#eff6ff;">
+  <section class="section" id="como-funciona" style="background:#0a0f1e;">
     <div class="container">
       <header class="section-header">
         <h2>Como funciona?</h2>
@@ -914,7 +949,7 @@
   </section>
 
   <!-- ========== TECNOLOGIAS ========== -->
-  <section class="section" style="background:#dbeafe;">
+  <section class="section" style="background:#0f1729;">
     <div class="container">
       <header class="section-header">
         <h2>Tecnologias que usamos</h2>
