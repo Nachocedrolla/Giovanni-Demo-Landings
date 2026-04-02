@@ -61,9 +61,21 @@
   <!-- Page-specific styles -->
   <style>
     /* ---------- Hero gradient animation ---------- */
-    /* Forzar light mode siempre */
+    /* ===== FORZAR LIGHT MODE - sin excepciones ===== */
     :root { color-scheme: light only; }
-    body { background-color: #ffffff !important; color: #1e293b !important; }
+    html, body {
+      background-color: #ffffff !important;
+      color: #1e293b !important;
+    }
+    .section, section {
+      background-color: #ffffff;
+    }
+    .section-header h2 {
+      color: #0f172a !important;
+    }
+    .section-header p {
+      color: #475569 !important;
+    }
 
     /* ---------- Global font override ---------- */
     h1, h2, h3, h4, h5, h6,
@@ -722,7 +734,7 @@
   </section>
 
   <!-- ========== SERVICIOS ========== -->
-  <section class="section" id="servicios">
+  <section class="section" id="servicios" style="background:#ffffff;">
     <div class="container">
       <header class="section-header">
         <h2>Que hacemos?</h2>
@@ -782,7 +794,7 @@
   </section>
 
   <!-- ========== DEMOS ========== -->
-  <section class="section section--gray" id="demos">
+  <section class="section" id="demos" style="background:#f1f5f9;">
     <div class="container">
       <header class="section-header">
         <h2>Mira lo que podemos hacer por tu negocio</h2>
@@ -854,7 +866,7 @@
   </section>
 
   <!-- ========== COMO FUNCIONA ========== -->
-  <section class="section" id="como-funciona">
+  <section class="section" id="como-funciona" style="background:#f8faff;">
     <div class="container">
       <header class="section-header">
         <h2>Como funciona?</h2>
@@ -902,7 +914,7 @@
   </section>
 
   <!-- ========== TECNOLOGIAS ========== -->
-  <section class="section section--gray">
+  <section class="section" style="background:#ffffff;">
     <div class="container">
       <header class="section-header">
         <h2>Tecnologias que usamos</h2>
