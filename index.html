@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giovanni Servicios IA | Soluciones Inteligentes para tu Negocio</title>
+  <meta name="description" content="Transformamos tu negocio con Inteligencia Artificial. Chatbots, automatizaciones, reservas inteligentes y landing pages personalizadas para cada industria.">
+  <link rel="canonical" href="https://www.giovanniflota.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Giovanni Servicios IA | Soluciones Inteligentes para tu Negocio">
+  <meta property="og:description" content="Chatbots, automatizaciones, reservas inteligentes y landing pages personalizadas para cada industria. Todo potenciado con IA.">
+  <meta property="og:url" content="https://www.giovanniflota.com/">
+  <meta property="og:image" content="https://www.giovanniflota.com/assets/og-home.jpg">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Giovanni Servicios IA">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Imagenes/Logo Giovanni Servicios IA.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- GA4: reemplazar G-XXXXXXXXXX -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Giovanni Servicios IA",
+    "url": "https://www.giovanniflota.com",
+    "logo": "https://www.giovanniflota.com/assets/logo.png",
+    "description": "Soluciones de Inteligencia Artificial para negocios: chatbots, automatizaciones, reservas y landing pages personalizadas.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": "Spanish"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <!-- Page-specific styles -->
+  <style>
+    /* ---------- Hero gradient animation ---------- */
+    /* ---------- Global font override ---------- */
+    h1, h2, h3, h4, h5, h6,
+    .hero__title, .hero__stat-number,
+    .section-header h2, .timeline__step h3,
+    .service-card h3, .demo-card__content h3 {
+      font-family: 'Space Grotesk', sans-serif !important;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0c1e5c 0%, #1238b8 30%, #2563eb 55%, #1238b8 75%, #0c1e5c 100%);
+      background-size: 300% 300%;
+      animation: gradient-shift 10s ease infinite;
+    }
+
+    @keyframes gradient-shift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Glow central detrás del logo */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 800px 600px at 50% 30%, rgba(120, 180, 255, 0.4) 0%, transparent 65%),
+        radial-gradient(ellipse 500px 300px at 85% 15%, rgba(212, 168, 83, 0.25) 0%, transparent 55%),
+        radial-gradient(ellipse 400px 300px at 10% 75%, rgba(80, 130, 255, 0.2) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    /* Estrellas / partículas CSS */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 55% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 30%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 85%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(2px 2px at 30% 20%, rgba(255,255,255,0.3) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 60% 80%, rgba(255,255,255,0.4) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 3;
+      max-width: 820px;
+      padding: 2rem 1.5rem;
+    }
+
+    .hero__logo {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      margin: 0 auto 2rem;
+      filter: drop-shadow(0 0 30px rgba(212, 168, 83, 0.6)) drop-shadow(0 8px 20px rgba(0,0,0,0.5));
+      animation: logo-float 4s ease-in-out infinite;
+    }
+
+    @keyframes logo-float {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-8px); }
+    }
+
+    .hero__title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: #ffffff !important;
+      margin-bottom: 1.25rem;
+      line-height: 1.15;
+      text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero__title .text-accent {
+      color: #f0c040;
+      text-shadow: 0 0 40px rgba(240, 192, 64, 0.5);
+    }
+
+    .hero__subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(210, 225, 255, 0.9);
+      max-width: 620px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+
+    /* Navbar links blancos sobre hero oscuro */
+    .navbar .navbar__links a {
+      color: rgba(220, 230, 255, 0.85);
+    }
+    .navbar .navbar__links a:hover {
+      color: #ffffff;
+    }
+    .navbar__brand span {
+      color: #ffffff;
+    }
+    /* Navbar scrolled — fondo sólido */
+    .navbar.navbar-scrolled .navbar__links a {
+      color: var(--primary);
+    }
+    .navbar.navbar-scrolled .navbar__brand span {
+      color: var(--primary);
+    }
+
+    .hero__ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    /* ---- Botones del hero (sobreescribe globales para fondo oscuro) ---- */
+    .hero .btn--primary {
+      background: linear-gradient(135deg, #4f8ef7 0%, #2563eb 100%);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 24px rgba(79, 142, 247, 0.5);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .hero .btn--primary:hover {
+      background: linear-gradient(135deg, #6aa3ff 0%, #3b7af5 100%);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(79, 142, 247, 0.7);
+    }
+
+    .hero .btn--outline {
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.55);
+      color: #ffffff;
+    }
+
+    .hero .btn--outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+
+    .hero__stats {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero__stat {
+      text-align: center;
+    }
+
+    .hero__stat-number {
+      display: block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #d4a853;
+      line-height: 1;
+      text-shadow: 0 0 30px rgba(212, 168, 83, 0.3);
+    }
+
+    .hero__stat-label {
+      display: block;
+      font-size: 0.85rem;
+      color: rgba(200, 215, 255, 0.75);
+      margin-top: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ---------- Services section bg ---------- */
+    #servicios {
+      background: linear-gradient(180deg, #f0f4ff 0%, #ffffff 60%);
+    }
+
+    /* ---------- Services grid ---------- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1.5px solid rgba(26, 58, 107, 0.1);
+      border-radius: 20px;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(26, 58, 107, 0.06);
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #2563eb, #d4a853);
+      transform: scaleX(0);
+      transition: transform 0.35s ease;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 24px 48px rgba(26, 58, 107, 0.16);
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+
+    .service-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .service-card__icon {
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 68px;
+      height: 68px;
+      margin-left: auto;
+      margin-right: auto;
+      background: linear-gradient(135deg, #eef2ff 0%, #e0e8ff 100%);
+      border-radius: 18px;
+      color: #2563eb;
+      transition: all 0.35s ease;
+    }
+
+    .service-card__icon svg {
+      width: 32px;
+      height: 32px;
+      stroke-width: 2;
+    }
+
+    .service-card:hover .service-card__icon {
+      background: linear-gradient(135deg, #2563eb 0%, #1a3a9f 100%);
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+    }
+
+    .service-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: #0f172a;
+    }
+
+    .service-card p {
+      font-size: 0.93rem;
+      color: #64748b;
+      line-height: 1.65;
+    }
+
+    /* ---------- Demo cards ---------- */
+    .demos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .demo-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .demo-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .demo-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 22, 40, 0.95) 0%, rgba(10, 22, 40, 0.6) 40%, rgba(10, 22, 40, 0.15) 100%);
+      z-index: 1;
+    }
+
+    .demo-card__content {
+      position: relative;
+      z-index: 2;
+      padding: 2rem;
+    }
+
+    .demo-card__icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .demo-card__content h3 {
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .demo-card__content p {
+      font-size: 0.95rem;
+      color: var(--gray-300);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .demo-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .demo-card__tag {
+      display: inline-block;
+      padding: 0.3rem 0.75rem;
+      background: rgba(201, 168, 76, 0.15);
+      color: var(--accent-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 50px;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+    }
+
+    .demo-card__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1rem;
+      transition: gap var(--transition-fast), color var(--transition-fast);
+    }
+
+    .demo-card__btn:hover {
+      color: var(--accent-light);
+      gap: 0.75rem;
+    }
+
+    /* ---------- Timeline ---------- */
+    .timeline {
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
+      padding-left: 3rem;
+    }
+
+    #como-funciona {
+      background: linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%);
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 14px;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, #2563eb 0%, #d4a853 100%);
+    }
+
+    .timeline__step {
+      position: relative;
+      padding-bottom: 3rem;
+    }
+
+    .timeline__step:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline__marker {
+      position: absolute;
+      left: -3rem;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #2563eb 0%, #1a3a9f 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #ffffff;
+      box-shadow: 0 0 0 4px #e0e8ff, 0 4px 12px rgba(37,99,235,0.3);
+      z-index: 2;
+    }
+
+    .timeline__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, #eef2ff 0%, #dde8ff 100%);
+      border-radius: 14px;
+      margin-bottom: 0.75rem;
+      color: #2563eb;
+      border: 1.5px solid rgba(37, 99, 235, 0.15);
+    }
+
+    .timeline__icon svg {
+      width: 26px;
+      height: 26px;
+      stroke-width: 2;
+    }
+
+    .timeline__step h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.35rem;
+    }
+
+    .timeline__step p {
+      font-size: 0.95rem;
+      color: #64748b;
+      line-height: 1.65;
+    }
+
+    /* ---------- Tech badges ---------- */
+    .tech-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.4rem;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--gray-600);
+      transition: all var(--transition-fast);
+    }
+
+    .tech-badge:hover {
+      border-color: var(--accent);
+      color: var(--primary);
+      background: rgba(201, 168, 76, 0.06);
+    }
+
+    /* ---------- Contact grid ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-info__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .contact-info__icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(201, 168, 76, 0.12);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .contact-info__text h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-info__text p,
+    .contact-info__text a {
+      font-size: 0.9rem;
+      color: var(--gray-400);
+    }
+
+    .contact-info__text a:hover {
+      color: var(--accent);
+    }
+
+    /* ---------- Responsive overrides ---------- */
+    @media (max-width: 992px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .demos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero__stats {
+        gap: 1.5rem;
+      }
+
+      .hero__stat-number {
+        font-size: 1.8rem;
+      }
+
+      .demo-card {
+        min-height: 320px;
+      }
+
+      .timeline {
+        padding-left: 2.5rem;
+      }
+
+      .timeline::before {
+        left: 11px;
+      }
+
+      .timeline__marker {
+        left: -2.5rem;
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" role="navigation" aria-label="Navegacion principal">
+    <div class="navbar__inner">
+      <a href="/" class="navbar__brand" aria-label="Giovanni Servicios IA - Inicio">
+        <img src="Imagenes/Logo giovanni vectorizado fondos oscuros.png" alt="Logo Giovanni Servicios IA" width="40" height="40">
+        <span>Giovanni Servicios IA</span>
+      </a>
+
+      <div class="navbar__links">
+        <a href="#hero">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#demos">Demos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <a href="#contacto" class="btn btn--primary btn--sm navbar__cta">Empezar ahora</a>
+
+      <button class="navbar__hamburger" aria-label="Abrir menu de navegacion" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-overlay" aria-hidden="true"></div>
+  <nav class="mobile-nav" aria-label="Menu movil">
+    <a href="#hero">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#demos">Demos</a>
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#contacto" class="btn btn--primary">Empezar ahora</a>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <img
+        src="Imagenes/Logo giovanni vectorizado fondos oscuros.png"
+        alt="Logo Giovanni Servicios IA - Escudo dorado con cerebro de inteligencia artificial"
+        class="hero__logo animate-on-scroll"
+        width="150"
+        height="150"
+      >
+
+      <h1 class="hero__title animate-on-scroll" data-delay="200">
+        Transformamos tu negocio con <span class="text-accent typewriter" data-text="Inteligencia Artificial">Inteligencia Artificial</span>
+      </h1>
+
+      <p class="hero__subtitle animate-on-scroll" data-delay="400">
+        Chatbots, automatizaciones, reservas inteligentes y mas. Todo personalizado para tu industria.
+      </p>
+
+      <div class="hero__ctas animate-on-scroll" data-delay="600">
+        <a href="#demos" class="btn btn--primary btn--lg">Ver Demos en Vivo</a>
+        <a href="#contacto" class="btn btn--outline btn--lg">Contactar</a>
+      </div>
+
+      <div class="hero__stats animate-on-scroll" data-delay="800">
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="4" data-suffix="+">0</span>
+          <span class="hero__stat-label">Industrias</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="100" data-suffix="%">0</span>
+          <span class="hero__stat-label">Automatizado</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="24" data-suffix="/7">0</span>
+          <span class="hero__stat-label">Disponible</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-count="48" data-suffix="hs">0</span>
+          <span class="hero__stat-label">Setup</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICIOS ========== -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <header class="section-header">
+        <h2>Que hacemos?</h2>
+        <p>Soluciones de inteligencia artificial adaptadas a las necesidades reales de tu negocio</p>
+      </header>
+
+      <div class="services-grid">
+        <article class="service-card animate-on-scroll" data-delay="0">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+          </div>
+          <h3>Chatbots Inteligentes</h3>
+          <p>Asistentes virtuales que atienden, recomiendan y venden 24/7</p>
+        </article>
+
+        <article class="service-card animate-on-scroll" data-delay="100">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+          </div>
+          <h3>Reservas Automáticas</h3>
+          <p>Sistema de turnos y reservas integrado a tu sitio web</p>
+        </article>
+
+        <article class="service-card animate-on-scroll" data-delay="200">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><path d="M4 2C2.8 3.7 2 5.7 2 8"/><path d="M20 2c1.2 1.7 2 3.7 2 6"/></svg>
+          </div>
+          <h3>Notificaciones</h3>
+          <p>Confirmaciones y recordatorios automáticos por email</p>
+        </article>
+
+        <article class="service-card animate-on-scroll" data-delay="300">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <h3>Landing Pages</h3>
+          <p>Sitios web profesionales optimizados para convertir</p>
+        </article>
+
+        <article class="service-card animate-on-scroll" data-delay="400">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+          </div>
+          <h3>Dashboards</h3>
+          <p>Paneles de control con datos en tiempo real</p>
+        </article>
+
+        <article class="service-card animate-on-scroll" data-delay="500">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Automatizaciones</h3>
+          <p>Flujos de trabajo inteligentes con n8n y Supabase</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DEMOS ========== -->
+  <section class="section section--gray" id="demos">
+    <div class="container">
+      <header class="section-header">
+        <h2>Mira lo que podemos hacer por tu negocio</h2>
+        <p>Explora nuestras demos interactivas por industria</p>
+      </header>
+
+      <div class="demos-grid">
+        <!-- Demo: Restaurante -->
+        <article class="demo-card animate-on-scroll" data-delay="0" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80');">
+          <div class="demo-card__content">
+            <span class="demo-card__icon" aria-hidden="true">&#x1F37D;&#xFE0F;</span>
+            <h3>Restaurante</h3>
+            <p>Carta digital, reservas online y chatbot que recomienda platos</p>
+            <div class="demo-card__tags">
+              <span class="demo-card__tag">Chatbot</span>
+              <span class="demo-card__tag">Reservas</span>
+              <span class="demo-card__tag">Menu Digital</span>
+            </div>
+            <a href="restaurante/index.html" class="demo-card__btn">Ver Demo <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <!-- Demo: Turismo -->
+        <article class="demo-card animate-on-scroll" data-delay="100" style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&q=80');">
+          <div class="demo-card__content">
+            <span class="demo-card__icon" aria-hidden="true">&#x2708;&#xFE0F;</span>
+            <h3>Agencia de Turismo</h3>
+            <p>Destinos interactivos, consultas automatizadas y galeria inmersiva</p>
+            <div class="demo-card__tags">
+              <span class="demo-card__tag">Agente IA</span>
+              <span class="demo-card__tag">Destinos</span>
+              <span class="demo-card__tag">Consultas</span>
+            </div>
+            <a href="turismo/index.html" class="demo-card__btn">Ver Demo <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <!-- Demo: Clinica -->
+        <article class="demo-card animate-on-scroll" data-delay="200" style="background-image: url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80');">
+          <div class="demo-card__content">
+            <span class="demo-card__icon" aria-hidden="true">&#x1F486;</span>
+            <h3>Clinica Estetica</h3>
+            <p>Turnos online, info de tratamientos y confirmacion por email</p>
+            <div class="demo-card__tags">
+              <span class="demo-card__tag">Turnos</span>
+              <span class="demo-card__tag">Email</span>
+              <span class="demo-card__tag">Tratamientos</span>
+            </div>
+            <a href="clinica/index.html" class="demo-card__btn">Ver Demo <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+
+        <!-- Demo: Barberia -->
+        <article class="demo-card animate-on-scroll" data-delay="300" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80');">
+          <div class="demo-card__content">
+            <span class="demo-card__icon" aria-hidden="true">&#x1F488;</span>
+            <h3>Barberia</h3>
+            <p>Reserva de turnos, galeria de estilos y atencion automatizada</p>
+            <div class="demo-card__tags">
+              <span class="demo-card__tag">Reservas</span>
+              <span class="demo-card__tag">Galeria</span>
+              <span class="demo-card__tag">Chatbot</span>
+            </div>
+            <a href="barberia/index.html" class="demo-card__btn">Ver Demo <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMO FUNCIONA ========== -->
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <header class="section-header">
+        <h2>Como funciona?</h2>
+        <p>En 4 simples pasos tu negocio queda automatizado</p>
+      </header>
+
+      <div class="timeline">
+        <div class="timeline__step animate-on-scroll" data-delay="0">
+          <div class="timeline__marker">1</div>
+          <div class="timeline__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg>
+          </div>
+          <h3>Nos contactás</h3>
+          <p>Contanos sobre tu negocio y qué necesitás. Respondemos en menos de 24 horas.</p>
+        </div>
+
+        <div class="timeline__step animate-on-scroll" data-delay="150">
+          <div class="timeline__marker">2</div>
+          <div class="timeline__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+          </div>
+          <h3>Diseñamos tu solución</h3>
+          <p>Creamos una propuesta personalizada para tu rubro con las herramientas ideales.</p>
+        </div>
+
+        <div class="timeline__step animate-on-scroll" data-delay="300">
+          <div class="timeline__marker">3</div>
+          <div class="timeline__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Desarrollamos e integramos</h3>
+          <p>Construimos todo y lo conectamos a tus herramientas actuales sin fricciones.</p>
+        </div>
+
+        <div class="timeline__step animate-on-scroll" data-delay="450">
+          <div class="timeline__marker">4</div>
+          <div class="timeline__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+          </div>
+          <h3>Lanzamos y optimizamos</h3>
+          <p>Tu negocio automatizado, funcionando 24/7. Nosotros seguimos optimizando.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECNOLOGIAS ========== -->
+  <section class="section section--gray">
+    <div class="container">
+      <header class="section-header">
+        <h2>Tecnologias que usamos</h2>
+        <p>Herramientas de vanguardia para soluciones robustas y escalables</p>
+      </header>
+
+      <div class="tech-badges animate-on-scroll">
+        <span class="tech-badge">Supabase</span>
+        <span class="tech-badge">n8n</span>
+        <span class="tech-badge">Vercel</span>
+        <span class="tech-badge">PostgreSQL</span>
+        <span class="tech-badge">Claude AI</span>
+        <span class="tech-badge">HTML5</span>
+        <span class="tech-badge">JavaScript</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACTO ========== -->
+  <section class="section section--dark" id="contacto">
+    <div class="container">
+      <header class="section-header">
+        <h2>Hablemos de tu proyecto</h2>
+        <p>Contanos que necesitas y te armamos una propuesta a medida</p>
+      </header>
+
+      <div class="contact-grid">
+        <!-- Formulario -->
+        <form id="contact-form" autocomplete="on">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 0000-0000" autocomplete="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="rubro">Rubro</label>
+            <select id="rubro" name="rubro" required>
+              <option value="" disabled selected>Selecciona tu rubro</option>
+              <option value="gastronomia">Gastronomia</option>
+              <option value="turismo">Turismo</option>
+              <option value="salud-estetica">Salud / Estetica</option>
+              <option value="barberia-peluqueria">Barberia / Peluqueria</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Contanos sobre tu negocio y que te gustaria automatizar..." rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg" style="width:100%;">Enviar mensaje</button>
+        </form>
+
+        <!-- Info lateral -->
+        <div class="contact-info">
+          <div class="contact-info__item">
+            <div class="contact-info__icon" aria-hidden="true">&#x1F4E7;</div>
+            <div class="contact-info__text">
+              <h4>Email</h4>
+              <a href="mailto:hola@giovanniflota.com">hola@giovanniflota.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="contact-info__icon" aria-hidden="true">&#x1F4F1;</div>
+            <div class="contact-info__text">
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/5491100000000" target="_blank" rel="noopener">+54 9 11 0000-0000</a>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="contact-info__icon" aria-hidden="true">&#x1F4CD;</div>
+            <div class="contact-info__text">
+              <h4>Ubicacion</h4>
+              <p>Buenos Aires, Argentina</p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="contact-info__icon" aria-hidden="true">&#x23F0;</div>
+            <div class="contact-info__text">
+              <h4>Horario de atencion</h4>
+              <p>Lunes a Viernes, 9:00 a 18:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">
+            <img src="Imagenes/Logo giovanni vectorizado fondos oscuros.png" alt="Logo Giovanni Servicios IA" width="36" height="36">
+            <span>Giovanni Servicios IA</span>
+          </div>
+          <p style="max-width:320px; font-size:0.9rem; color:var(--gray-500); line-height:1.6;">
+            Soluciones de inteligencia artificial para negocios que quieren crecer. Automatiza, convierte y escala.
+          </p>
+        </div>
+
+        <div class="footer__links">
+          <div class="footer__links-col">
+            <h4>Navegacion</h4>
+            <a href="#hero">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#demos">Demos</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+          <div class="footer__links-col">
+            <h4>Demos</h4>
+            <a href="restaurante/index.html">Restaurante</a>
+            <a href="turismo/index.html">Turismo</a>
+            <a href="clinica/index.html">Clinica Estetica</a>
+            <a href="barberia/index.html">Barberia</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Giovanni Servicios IA. Todos los derechos reservados.</p>
+        <p>Hecho con inteligencia artificial y dedicacion humana.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== WHATSAPP FLOAT ========== -->
+  <a
+    href="https://wa.me/5491100000000"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactanos por WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.502 1.132 6.744 3.054 9.378L1.054 31.2l6.054-1.94a15.9 15.9 0 008.896 2.694C24.826 31.954 32 24.778 32 16.004S24.826 0 16.004 0zm9.31 22.616c-.39 1.1-2.284 2.1-3.146 2.168-.796.068-1.792.098-2.894-.182a26.5 26.5 0 01-2.618-.968c-4.606-1.988-7.616-6.66-7.846-6.972-.23-.306-1.882-2.506-1.882-4.78 0-2.276 1.19-3.394 1.614-3.858.424-.464.926-.58 1.234-.58.308 0 .616.002.886.016.284.014.666-.108 1.042.794.39.926 1.326 3.236 1.442 3.466.114.232.19.502.038.808-.152.306-.23.498-.46.768-.23.27-.484.604-.69.81-.23.232-.47.484-.202.948.268.464 1.192 1.966 2.56 3.184 1.758 1.566 3.24 2.05 3.704 2.282.464.232.734.194 1.004-.116.268-.312 1.158-1.35 1.466-1.814.306-.464.616-.384 1.04-.23.424.152 2.694 1.27 3.156 1.502.464.23.772.348.886.54.114.19.114 1.108-.276 2.208z"/>
+    </svg>
+  </a>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="js/main.js"></script>
+  <script>
+    // Init tour para la landing principal
+    document.addEventListener('DOMContentLoaded', function() {
+      // El tour se inicializa desde main.js automaticamente
+      // Solo configuramos el tour especifico de esta pagina
+      if (typeof TourGuide !== 'undefined') {
+        var tour = new TourGuide({
+          steps: [
+            { element: '#hero', title: 'Bienvenido!', text: 'Soy Giovanni, tu asistente de IA. Te voy a mostrar todo lo que podemos hacer por tu negocio.', position: 'bottom' },
+            { element: '#servicios', title: 'Nuestros Servicios', text: 'Chatbots, reservas, automatizaciones y mas. Todo potenciado con IA.', position: 'top' },
+            { element: '#demos', title: 'Demos en Vivo', text: 'Explora ejemplos reales de como transformamos cada industria.', position: 'top' },
+            { element: '#como-funciona', title: 'Simple y Rapido', text: 'En 4 pasos tu negocio esta automatizado.', position: 'top' },
+            { element: '#contacto', title: 'Empieza Ahora!', text: 'Contactanos y en 48hs tenes tu solucion funcionando.', position: 'top' }
+          ]
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
